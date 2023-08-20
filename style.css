@@ -56,7 +56,8 @@ nav .top-section::after{
     align-items: center;
 }
 .top-section li.sec-one{
-    min-width: 70%;
+    min-width: 50%;
+    width: 60%;
     height: 60px;
     gap: 20px;
     padding: 0 15px;
@@ -120,6 +121,7 @@ nav .top-section::after{
 .top-section .sec-two{
     gap: 12px;
     font-size: 1.1em;
+    padding: 0 15px 0 0;
 }
 .top-section .sec-two > div{
     height: 40px;
@@ -145,7 +147,7 @@ nav .top-section::after{
     top: -3px;
     right: 0;
     font-size: .7em;
-    background: #f00;
+    background: #dc143c;
     padding: 2px;
     border-radius: 15px;
     height: 1.1em;
@@ -234,4 +236,43 @@ nav.active .side-section{
 }
 nav.active .top-section{
     width: calc(100% - 200px);
+}
+
+/* ! Media query */
+
+@media (max-width:550px) {
+    .top-section .sec-two{
+        gap: 7px;
+        font-size: 1em;
+        padding: 0 10px 0 0;
+    }
+    .top-section .sec-two > div{
+        height: 30px;
+    }
+    .top-section .sec-two .notification::before{
+        font-size: .6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width:450px) {
+    .top-section{
+        justify-content: center;
+        gap: 10px;
+    }
+    .top-section .sec-one{
+        min-width: 100px;
+    }
+    .top-section .sec-one .logo{
+        font-size: 1.1em;
+    }
+    .top-section .sec-one form{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        border: 1px solid #fff;
+        z-index: 2;
+    }
 }
